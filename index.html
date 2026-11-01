@@ -1,45 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Henry's Jet Washing</title>
+  <title>Henry's Exterior Cleaning | Whitstable &amp; Herne Bay</title>
+  <meta name="description" content="Roof cleaning, moss removal, pressure washing, gutters and more in Whitstable, Herne Bay and across Kent. Free, no-obligation quotes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <header>
-    <h1>Henry's Jet Washing</h1>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="logo" aria-label="Henry's Exterior Cleaning, back to top">
+        <svg class="logo-star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.8l2.95 6.9 7.45.6-5.65 4.9 1.75 7.3L12 17.6l-6.5 3.9 1.75-7.3L1.6 9.3l7.45-.6z"/></svg>
+        <span class="logo-text" aria-hidden="true">
+          <span class="logo-name">Henry's</span>
+          <span class="logo-sub">exterior cleaning</span>
+          <svg class="logo-swoosh" viewBox="0 0 150 12" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="water" x1="0" x2="1" y1="0" y2="0">
+                <stop offset="0" stop-color="#8fd0f5"/>
+                <stop offset="0.55" stop-color="#3d9be0"/>
+                <stop offset="1" stop-color="#1670b0"/>
+              </linearGradient>
+            </defs>
+            <path fill="url(#water)" d="M1.0 5.65 L4.7 6.12 L8.4 6.58 L12.1 6.94 L15.8 7.11 L19.5 7.08 L23.2 6.82 L26.9 6.34 L30.6 5.69 L34.3 4.90 L38.0 4.06 L41.7 3.22 L45.4 2.47 L49.1 1.86 L52.8 1.45 L56.5 1.28 L60.2 1.35 L63.9 1.65 L67.6 2.16 L71.3 2.81 L75.0 3.55 L78.7 4.30 L82.4 4.98 L86.1 5.54 L89.8 5.92 L93.5 6.08 L97.2 6.02 L100.9 5.74 L104.6 5.29 L108.3 4.70 L112.0 4.06 L115.7 3.42 L119.4 2.87 L123.1 2.46 L126.8 2.25 L130.5 2.28 L134.2 2.55 L137.9 3.05 L141.6 3.76 L145.3 4.63 L149.0 5.65 L149.0 6.35 L145.3 5.88 L141.6 5.42 L137.9 5.06 L134.2 4.89 L130.5 4.92 L126.8 5.18 L123.1 5.66 L119.4 6.31 L115.7 7.10 L112.0 7.94 L108.3 8.78 L104.6 9.53 L100.9 10.14 L97.2 10.55 L93.5 10.72 L89.8 10.65 L86.1 10.35 L82.4 9.84 L78.7 9.19 L75.0 8.45 L71.3 7.70 L67.6 7.02 L63.9 6.46 L60.2 6.08 L56.5 5.92 L52.8 5.98 L49.1 6.26 L45.4 6.71 L41.7 7.30 L38.0 7.94 L34.3 8.58 L30.6 9.13 L26.9 9.54 L23.2 9.75 L19.5 9.72 L15.8 9.45 L12.1 8.95 L8.4 8.24 L4.7 7.37 L1.0 6.35Z"/>
+          </svg>
+        </span>
+      </a>
+
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-toggle-bar" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <a href="#services">Services</a>
+        <a href="#work">Our Work</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="nav-cta">Free Quote</a>
+      </nav>
+    </div>
   </header>
 
-  <section id="hero">
-    <h2>Professional Jet Washing Services</h2>
-    <p>Driveways, patios, decking and more — we'll make it look brand new.</p>
-    <a href="#contact" class="btn">Get a Free Quote</a>
-  </section>
+  <main id="top">
+    <section id="hero" class="hero">
+      <!-- Full-width background photo of a half-finished job: roof on wide screens, driveway on phones -->
+      <picture class="hero-bg">
+        <source media="(min-width: 760px)" srcset="images/roof-moss-before-after.png" width="853" height="695">
+        <img src="images/driveway-before-after.png" width="554" height="727"
+             alt="A half-finished cleaning job showing the dirty and clean sides next to each other">
+      </picture>
 
-  <section id="services">
-    <h2>Services</h2>
-    <!-- Services will go here -->
-  </section>
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow">Whitstable &middot; Herne Bay &middot; Kent</p>
+          <h1>Roof, driveway &amp; exterior cleaning, done properly.</h1>
+          <p class="hero-lead">Moss removal, pressure washing, gutters, render and more. Send a photo of the job and get a free, no-obligation quote.</p>
 
-  <section id="about">
-    <h2>About</h2>
-    <!-- About content will go here -->
-  </section>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary">Get a free quote</a>
+            <a href="https://wa.me/447000000000" class="btn btn-ghost">
+              <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19.1L4 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+              Send photos on WhatsApp
+            </a>
+          </div>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <!-- Contact form will go here -->
-  </section>
+          <ul class="hero-points">
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+              Free quotes, no obligation
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+              Roofs, gutters, driveways and walls
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+              Covering Whitstable, Herne Bay and nearby
+            </li>
+          </ul>
+        </div>
 
-  <footer>
-    <p>&copy; 2026 Henry's Jet Washing. All rights reserved.</p>
+        <figure class="henry-card">
+          <img src="images/henry-with-van.png" width="860" height="686"
+               alt="Henry standing by his van">
+          <figcaption>Henry</figcaption>
+        </figure>
+      </div>
+
+      <p class="hero-caption">
+        <span class="caption-wide">Background: roof moss removal, stopped halfway</span>
+        <span class="caption-narrow">Background: driveway clean, stopped halfway</span>
+      </p>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <h2>Services</h2>
+        <!-- Build step 2 -->
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="container">
+        <h2>Our Work</h2>
+        <!-- Build step 3 -->
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2>About</h2>
+        <!-- Build step 4 -->
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <!-- Build step 5 -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year">2026</span> Henry's Exterior Cleaning</p>
+    </div>
   </footer>
 
   <script src="js/main.js"></script>

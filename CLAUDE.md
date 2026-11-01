@@ -11,7 +11,7 @@ Single-page website for a local exterior cleaning business in Kent, UK.
 - Use British English spelling (e.g. "colour", "specialise").
 
 ## The business
-- **Name:** Henry's Exterior Cleaning. This is the name on his van and uniform. The site currently says "Henry's Jet Washing"; confirm which to use.
+- **Name:** Henry's Exterior Cleaning (matches his van and uniform). Never use "Henry's Jet Washing".
 - **Owner:** Henry. Young, independent, local, and does the work himself.
 - **Area:** Kent, mainly Whitstable and Herne Bay (and surrounding areas).
 - **Customers:** Mainly homeowners, but also open to any customer.
@@ -40,12 +40,38 @@ Single-page website for a local exterior cleaning business in Kent, UK.
 Phone and WhatsApp should be tap-to-call and tap-to-message on mobile.
 
 ## Tone and feel
-Local, friendly, clean and professional, but relatable. Write plainly, like Henry talking to a neighbour. Avoid corporate jargon, hype and exclamation-mark overload. Keep copy short and scannable.
+Friendly, clean and professional, but relatable. Write plainly and specifically. Keep copy short and scannable.
+
+Write for conversion, i.e. what customers want to know: what he does, where, proof it looks good, and how easy it is to get a quote. Prefer concrete details (services, areas, "send a photo for a quote") over personality claims.
+
+Don't use:
+- Slang or clichés such as "local lad" or "takes pride in the job"
+- On-the-nose lines that state the obvious, such as "you'll deal with me directly"
+- Corporate jargon, hype or exclamation marks
 
 ## Brand
 - From his uniform logo: black, a gold/yellow star and a blue water swoosh.
-- Suggested palette: near-black / dark charcoal, a clean white, water blue as the main accent, and gold/yellow as a small highlight (stars, small details). Final colours not yet chosen.
-- No logo file yet. Use a text logo for now, with a star motif.
+- Look: **light, restrained and professional**. A white header, white or very light grey (`--surface`) sections, and **one** accent colour (blue). Dark ink (`--ink`) is for the footer only. Gold is only for the logo star and review stars.
+- Colours are CSS variables in `css/style.css`. Always use the variables, never hard-coded colours.
+
+What the user rejected:
+- A bright blue gradient with gold buttons and a wave divider felt "amateur".
+- An all-dark navy theme was "way too dark".
+- Plain, text-only layouts "look like a news article".
+
+What works: break up block colour with real photos used as backgrounds or panels, and keep structure clean.
+- Buttons: `.btn-primary` (blue) is the main call to action; `.btn-secondary` (white with a border) is the secondary one.
+- The logo is the gold SVG star, "HENRY'S" over "exterior cleaning", with a thick, tapered wavy line underneath in a light-to-deep blue water gradient. The line is offset right and tilted up slightly (-4deg), based on his shirt. Keep it wavy, thick and watery, not a thin line or a brush stroke.
+- Hero: a **full-width background photo** of a half-finished job behind the whole section, with a dark overlay and white text on top. This is the style the user asked for, showing results at the top.
+  - Wide screens use `roof-moss-before-after.png`; phones use `driveway-before-after.png` (via `<picture>`).
+  - Henry's photo sits on top as a slightly tilted white card on the right. It stays at the top because the user likes the personal feel.
+  - A small caption says what the background shows.
+- The dark overlay is only for photo backgrounds. The rest of the page stays light.
+- Font: Plus Jakarta Sans (Google Fonts).
+- No logo file yet. Use the text logo "★ Henry's Exterior Cleaning".
+
+## Getting quotes
+Big Call and WhatsApp buttons, plus a short quote form (posting to Formspree, set up at launch). On mobile, a sticky Call | WhatsApp bar at the bottom of the screen.
 
 ## Photos (`images/`)
 All photos show Henry's real work. Never use stock photos of other people as if they were his work.
