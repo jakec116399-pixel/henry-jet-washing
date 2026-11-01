@@ -433,13 +433,529 @@ section {
 
 .caption-wide { display: none; }
 
+/* ---------- Shared section bits ---------- */
+.section-head {
+  max-width: 40rem;
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+}
+
+.section-head--center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.section-head p:last-child {
+  font-size: 1.1rem;
+}
+
+.kicker {
+  margin-bottom: 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.35rem;
+  letter-spacing: -0.01em;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+/* ---------- Services ---------- */
+.service-features {
+  display: grid;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.service-feature {
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+  display: flex;
+  align-items: flex-end;
+  border-radius: var(--radius-lg);
+  background: var(--ink);
+  isolation: isolate;
+}
+
+.service-feature img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  transition: transform 0.5s ease;
+}
+
+.service-feature:hover img {
+  transform: scale(1.04);
+}
+
+/* Fade to dark at the bottom so the text reads */
+.service-feature::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(10, 18, 26, 0) 35%, rgba(10, 18, 26, 0.88) 100%);
+}
+
+.service-feature-body {
+  padding: 1.5rem;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.service-feature h3 {
+  color: var(--white);
+  font-size: 1.35rem;
+}
+
+.service-list {
+  display: grid;
+  gap: 1.25rem;
+  list-style: none;
+}
+
+.service-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.service-item:hover {
+  border-color: transparent;
+  box-shadow: var(--shadow);
+}
+
+.service-icon {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 12px;
+  background: var(--blue-tint);
+}
+
+.service-icon svg {
+  width: 1.6rem;
+  height: 1.6rem;
+  fill: none;
+  stroke: var(--blue);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ---------- Our work ---------- */
+.work {
+  background: var(--surface);
+}
+
+.work-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.work-item figcaption {
+  margin-top: 0.7rem;
+  font-weight: 600;
+  color: var(--heading);
+}
+
+.work-photo {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  aspect-ratio: 4 / 3;
+  background: var(--line);
+}
+
+.work-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ba-tag {
+  position: absolute;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.ba-tag--tl { top: 0.9rem; left: 0.9rem; }
+.ba-tag--tr { top: 0.9rem; right: 0.9rem; }
+.ba-tag--bl { bottom: 0.9rem; left: 0.9rem; }
+
+.work-more {
+  margin-top: 2rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.work-more a {
+  font-weight: 700;
+}
+
+/* ---------- How it works ---------- */
+.steps {
+  display: grid;
+  gap: 2rem;
+  list-style: none;
+  counter-reset: none;
+}
+
+.step {
+  position: relative;
+  text-align: center;
+  max-width: 20rem;
+  margin: 0 auto;
+}
+
+.step-num {
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  background: var(--blue);
+  color: var(--white);
+  font-size: 1.35rem;
+  font-weight: 800;
+  box-shadow: 0 0 0 8px var(--blue-tint);
+}
+
+/* ---------- About ---------- */
+.about {
+  background: var(--surface);
+}
+
+.about-inner {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.about-photo img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+.about-text .kicker {
+  font-size: 0.8rem;
+  margin-bottom: 0.6rem;
+}
+
+.about-text .btn {
+  margin-top: 0.75rem;
+}
+
+/* ---------- Contact ---------- */
+.contact-inner {
+  display: grid;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.contact-text > p:not(.kicker) {
+  font-size: 1.1rem;
+  margin-bottom: 1.75rem;
+}
+
+.contact-buttons {
+  display: grid;
+  gap: 0.85rem;
+  margin-bottom: 2rem;
+}
+
+.contact-option {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  color: var(--text);
+  text-decoration: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.contact-option:hover {
+  border-color: var(--blue);
+  box-shadow: var(--shadow);
+}
+
+.contact-option strong {
+  display: block;
+  color: var(--heading);
+  font-size: 1.05rem;
+}
+
+.contact-option-icon {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: var(--blue);
+}
+
+.contact-option-icon--wa {
+  background: #1f9d55; /* WhatsApp green, so it's instantly recognisable */
+}
+
+.contact-option-icon svg {
+  width: 1.4rem;
+  height: 1.4rem;
+  fill: none;
+  stroke: var(--white);
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+
+.areas {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.quote-form {
+  padding: clamp(1.5rem, 4vw, 2.25rem);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-lg);
+}
+
+.quote-form h3 {
+  font-size: 1.35rem;
+  margin-bottom: 1.25rem;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+.form-grid {
+  display: grid;
+  gap: 0 1rem;
+}
+
+.quote-form label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--heading);
+}
+
+.optional {
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.quote-form input,
+.quote-form select,
+.quote-form textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid #cfd6dd;
+  border-radius: var(--radius);
+  background: var(--white);
+  color: var(--heading);
+  font: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.quote-form textarea {
+  resize: vertical;
+}
+
+.quote-form input:focus,
+.quote-form select:focus,
+.quote-form textarea:focus {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px var(--blue-tint);
+}
+
+.form-note {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  text-align: center;
+  color: var(--text-muted);
+}
+
 /* ---------- Footer ---------- */
 .site-footer {
   background: var(--ink);
-  color: rgba(255, 255, 255, 0.75);
-  padding: 2rem 0;
-  text-align: center;
-  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 3.5rem 0 0;
+  font-size: 0.95rem;
+}
+
+.footer-inner {
+  display: grid;
+  gap: 2rem;
+  padding-bottom: 2.5rem;
+}
+
+.footer-name {
+  margin-bottom: 0.5rem;
+  color: var(--white);
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.footer-star {
+  color: var(--gold);
+}
+
+.footer-brand p:last-child {
+  max-width: 22rem;
+}
+
+.site-footer h3 {
+  margin-bottom: 0.75rem;
+  color: var(--white);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.footer-links,
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+}
+
+.site-footer a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: var(--white);
+}
+
+.socials {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+}
+
+.socials a {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  transition: background-color 0.2s;
+}
+
+.socials a:hover {
+  background: var(--blue);
+}
+
+.socials svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  fill: var(--white);
+}
+
+.socials .icon-stroke {
+  fill: none;
+  stroke: var(--white);
+  stroke-width: 2;
+}
+
+.footer-bottom {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.85rem;
+}
+
+/* ---------- Mobile call/WhatsApp bar ---------- */
+.mobile-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 90;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+  padding: 0.6rem var(--gutter) calc(0.6rem + env(safe-area-inset-bottom));
+  background: rgba(255, 255, 255, 0.97);
+  border-top: 1px solid var(--line);
+  box-shadow: 0 -6px 20px rgba(15, 26, 36, 0.08);
+}
+
+.mobile-bar-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 48px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  color: var(--heading);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.mobile-bar-btn--primary {
+  border-color: #1f9d55;
+  background: #1f9d55;
+  color: var(--white);
+}
+
+.mobile-bar-btn svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+
+/* Leave room so the bar never covers the footer */
+body {
+  padding-bottom: 72px;
 }
 
 /* =========================================================
@@ -519,5 +1035,83 @@ section {
   .site-nav a.nav-cta:hover {
     color: var(--white);
     background: var(--blue-dark);
+  }
+}
+
+/* =========================================================
+   Sections: tablet and desktop layouts
+   ========================================================= */
+@media (min-width: 640px) {
+  .service-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .work-photo {
+    aspect-ratio: 1 / 1;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-inner {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 760px) {
+  .service-features {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .service-feature {
+    min-height: 380px;
+  }
+
+  .steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Dotted line joining the step numbers */
+  .step:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 1.75rem;
+    left: calc(50% + 2.75rem);
+    width: calc(100% - 5.5rem + 2rem);
+    border-top: 2px dashed #c7d3de;
+  }
+
+  /* Phones get the call/WhatsApp bar; bigger screens don't need it */
+  .mobile-bar {
+    display: none;
+  }
+
+  body {
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: 960px) {
+  .service-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .service-item {
+    flex-direction: column;
+  }
+
+  .about-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  .contact-inner {
+    grid-template-columns: 1fr 1.1fr;
+    gap: 4rem;
   }
 }

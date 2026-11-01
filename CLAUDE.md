@@ -42,12 +42,18 @@ Phone and WhatsApp should be tap-to-call and tap-to-message on mobile.
 ## Tone and feel
 Friendly, clean and professional, but relatable. Write plainly and specifically. Keep copy short and scannable.
 
+The About section is written in the first person, as Henry ("I'm Henry…"). The rest of the site refers to him as "Henry".
+
 Write for conversion, i.e. what customers want to know: what he does, where, proof it looks good, and how easy it is to get a quote. Prefer concrete details (services, areas, "send a photo for a quote") over personality claims.
 
 Don't use:
 - Slang or clichés such as "local lad" or "takes pride in the job"
 - On-the-nose lines that state the obvious, such as "you'll deal with me directly"
 - Corporate jargon, hype or exclamation marks
+- Over-explaining. Let visuals speak: a before/after gallery needs no intro paragraph, and a heading is often enough on its own.
+- Repeating the same call to action. "Send a photo" appears once only (the first quote step); everywhere else just says "WhatsApp Henry", "Call Henry" or "ask for a quote".
+- "Whether it's X or Y…" sentences and other filler openers.
+- A label and heading that say the same thing (e.g. "How it works" above "Get a quote in 3 easy steps"). Drop the label.
 
 ## Brand
 - From his uniform logo: black, a gold/yellow star and a blue water swoosh.
@@ -90,5 +96,13 @@ Notes:
 - Convert to compressed WebP/JPG before launch.
 
 ## Status
-- Started from a basic skeleton: header, hero, and empty services/about/contact sections.
-- The contact form will need a third-party service (e.g. Formspree) because the site is static.
+The whole one-page site is built. Sections: header, hero, Services (3 photo cards and 4 icon cards), Our Work (2 before/after photos), How it works (3 steps), About, Contact (WhatsApp and call buttons plus a quote form), footer, and a call/WhatsApp bar on phones.
+
+Still to do before launch:
+- Real phone number, WhatsApp number, and Facebook and Instagram links. Search for `07000 000000`, `447000000000`, `#facebook` and `#instagram`.
+- Formspree: create a form and replace `YOUR_FORM_ID` in `index.html`.
+- About text: add real details from Henry. There's a TODO comment in the About section.
+- Confirm with Henry: the roof cleaning and roof repair descriptions in Services.
+- Trust content to add once Henry provides it: reviews/star rating, insurance, years of experience, response time.
+- More photos: the roof moss photo is used three times (hero, Services, Our Work). Ask Henry for more before/after shots and original full-resolution photos.
+- Launch tasks: compress images (WebP), LocalBusiness structured data, favicon, hosting.
