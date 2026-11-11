@@ -422,17 +422,6 @@ section {
   text-align: center;
 }
 
-/* Small note saying what the background photo shows */
-.hero-caption {
-  position: absolute;
-  right: var(--gutter);
-  bottom: 0.9rem;
-  font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.caption-wide { display: none; }
-
 /* ---------- Shared section bits ---------- */
 .section-head {
   max-width: 40rem;
@@ -1093,8 +1082,6 @@ body {
     transform: rotate(2deg);
   }
 
-  .caption-wide { display: inline; }
-  .caption-narrow { display: none; }
 }
 
 /* =========================================================

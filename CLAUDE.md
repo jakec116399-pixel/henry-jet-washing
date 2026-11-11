@@ -72,7 +72,6 @@ What works: break up block colour with real photos used as backgrounds or panels
 - Hero: a **full-width background photo** of a half-finished job behind the whole section, with a dark overlay and white text on top. This is the style the user asked for, showing results at the top.
   - Wide screens use `roof-moss-before-after.png`; phones use `driveway-before-after.png` (via `<picture>`).
   - Henry's photo sits on top as a slightly tilted white card on the right. It stays at the top because the user likes the personal feel.
-  - A small caption says what the background shows.
 - The dark overlay is only for photo backgrounds. The rest of the page stays light.
 - Font: Plus Jakarta Sans (Google Fonts).
 - No logo file yet. Use the text logo "★ Henry's Exterior Cleaning".
