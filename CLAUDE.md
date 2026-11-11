@@ -105,7 +105,7 @@ Notes:
 - Convert to compressed WebP/JPG before launch.
 
 ## Status
-The whole one-page site is built. Sections: header, hero, Services (4 photo cards: window cleaning, roof cleaning, moss removal, pressure washing; then 4 icon cards), Our Work (swipeable gallery of 5 before/after pairs plus 1 half-cleaned decking photo, with arrows and a counter), How it works (3 steps), About, Contact (WhatsApp and call buttons plus a quote form), footer, and a call/WhatsApp bar on phones.
+The whole one-page site is built. Sections: header, hero, Services (4 photo cards: window cleaning, roof cleaning, moss removal, pressure washing; then 4 icon cards), Our Work (swipeable gallery of 5 before/after pairs plus 1 half-cleaned decking photo, with an arrow badge between each pair instead of Before/After labels; gallery arrows move a screen at a time and the counter counts screens), How it works (3 steps), About, Contact (WhatsApp and call buttons plus a quote form), footer, and a call/WhatsApp bar on phones.
 
 Still to do before launch:
 - Real phone number, WhatsApp number, and Facebook and Instagram links. Search for `07000 000000`, `447000000000`, `#facebook` and `#instagram`.
