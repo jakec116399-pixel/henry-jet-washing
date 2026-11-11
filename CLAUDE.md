@@ -70,7 +70,7 @@ What works: break up block colour with real photos used as backgrounds or panels
 - Buttons: `.btn-primary` (blue) is the main call to action; `.btn-secondary` (white with a border) is the secondary one.
 - The logo is the gold SVG star, "HENRY'S" over "exterior cleaning", with a thick, tapered wavy line underneath in a light-to-deep blue water gradient. The line is offset right and tilted up slightly (-4deg), based on his shirt. Keep it wavy, thick and watery, not a thin line or a brush stroke.
 - Hero: a **full-width background photo** of a half-finished job behind the whole section, with a dark overlay and white text on top. This is the style the user asked for, showing results at the top.
-  - Wide screens use `roof-moss-before-after.png`; phones use `driveway-before-after.png` (via `<picture>`).
+  - Wide screens use `roof-moss-before-after.png`; phones use `henry-roof-cleaning-pole.jpg` (via `<picture>`): its blue sky sits behind the headline. The user chose this over a half-cleaned driveway.
   - Henry's photo sits on top as a slightly tilted white card on the right. It stays at the top because the user likes the personal feel.
 - The dark overlay is only for photo backgrounds. The rest of the page stays light.
 - Font: Plus Jakarta Sans (Google Fonts).
@@ -86,7 +86,8 @@ All photos show Henry's real work. Never use stock photos of other people as if 
 |---|---|---|
 | `henry-with-van.png` | Henry smiling by his van, which lists his services | About section / hero |
 | `henry-at-work-composite.png` | Two photos side by side: Henry with a water-fed pole by the van, and cleaning a Tudor-style house | About section (small; 500px wide) |
-| `driveway-before-after.png` | Block-paved driveway, half cleaned: dirty grey vs bright clean | Before/after showcase, pressure washing |
+| `driveway-before-after.png` | Block-paved driveway, half cleaned: dirty grey vs bright clean | Not used now (was the phone hero; low resolution) |
+| `henry-roof-cleaning-pole.jpg` | Henry from behind, cleaning a tiled roof with a long pole, bright blue sky | Phone hero background |
 | `roof-moss-before-after.png` | Tiled roof with chimneys, half the moss removed | Before/after showcase, moss removal |
 | `roof-slate-treatment.png` | Slate roof being treated with a brush on a long pole | Roof cleaning service |
 | `decking-cleaned.png` | Freshly pressure-washed wooden decking with a lance | Pressure washing service |
@@ -112,5 +113,5 @@ Still to do before launch:
 - About text: add real details from Henry. There's a TODO comment in the About section.
 - Confirm with Henry: the roof cleaning and roof repair descriptions in Services.
 - Trust content to add once Henry provides it: reviews/star rating, insurance, years of experience, response time.
-- More photos: `roof-moss-before-after.png` is still used twice (hero and Moss removal card). The new .jpg photos are up to 900px; ask for full-resolution originals if a large hero image is needed. Unused upload: a first-person shot of a window being cleaned with a red pole (not added yet).
+- More photos: `roof-moss-before-after.png` is still used twice (hero and Moss removal card). The new .jpg photos are up to 900px; ask for full-resolution originals if a large hero image is needed. Not added yet (user has them): a first-person shot of a window being cleaned; Henry giving a thumbs up on a roof next to a chimney (suggested for About, user declined for now); a close-up of a foamed tiled roof being brushed.
 - Launch tasks: compress the older .png images (WebP/JPG), LocalBusiness structured data, favicon, hosting.
