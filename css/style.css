@@ -679,38 +679,26 @@ h3 {
   aspect-ratio: 3 / 4;
 }
 
-/* Small arrow badge between the two photos: before → after */
-.work-pair-arrow {
+/* Before/After labels, shown on the first pair only */
+.ba-tag {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 1;
-  display: grid;
-  place-items: center;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  background: var(--white);
-  color: var(--blue);
-  box-shadow: var(--shadow);
-  transform: translate(-50%, -50%);
-}
-
-.work-pair-arrow svg {
-  width: 1.2rem;
-  height: 1.2rem;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 2.4;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Single half-cleaned photo, sized to match a pair */
 .work-photo--wide {
   aspect-ratio: 3 / 2;
 }
-
 
 .work-more {
   margin-top: 1.5rem;
