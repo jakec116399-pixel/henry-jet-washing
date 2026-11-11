@@ -496,6 +496,11 @@ h3 {
   transition: transform 0.5s ease;
 }
 
+/* Keep Henry in frame when the square photo is cropped */
+.service-feature--window img {
+  object-position: 15% center;
+}
+
 .service-feature:hover img {
   transform: scale(1.04);
 }
@@ -517,37 +522,6 @@ h3 {
 .service-feature h3 {
   color: var(--white);
   font-size: 1.35rem;
-}
-
-/* Feature card without a photo: blue panel with a large icon */
-.service-feature-plain {
-  background: linear-gradient(160deg, var(--blue-bright), var(--blue-dark));
-}
-
-.service-feature-plain::after {
-  display: none;
-}
-
-.service-feature-icon {
-  position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
-  display: grid;
-  place-items: center;
-  width: 4rem;
-  height: 4rem;
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.16);
-}
-
-.service-feature-icon svg {
-  width: 2.2rem;
-  height: 2.2rem;
-  fill: none;
-  stroke: var(--white);
-  stroke-width: 1.6;
-  stroke-linecap: round;
-  stroke-linejoin: round;
 }
 
 .service-list {
@@ -620,6 +594,22 @@ h3 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* Before and after photos side by side */
+.work-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.work-pair .work-photo {
+  aspect-ratio: 3 / 4;
+}
+
+/* Single half-cleaned photo, sized to match a pair */
+.work-photo--wide {
+  aspect-ratio: 3 / 2;
 }
 
 .ba-tag {
@@ -1079,10 +1069,7 @@ body {
 
   .work-grid {
     grid-template-columns: 1fr 1fr;
-  }
-
-  .work-photo {
-    aspect-ratio: 1 / 1;
+    gap: 2rem 1.25rem;
   }
 
   .form-grid {
@@ -1134,6 +1121,10 @@ body {
 }
 
 @media (min-width: 960px) {
+  .work-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .service-list {
     grid-template-columns: repeat(4, 1fr);
   }

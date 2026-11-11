@@ -91,20 +91,27 @@ All photos show Henry's real work. Never use stock photos of other people as if 
 | `roof-moss-before-after.png` | Tiled roof with chimneys, half the moss removed | Before/after showcase, moss removal |
 | `roof-slate-treatment.png` | Slate roof being treated with a brush on a long pole | Roof cleaning service |
 | `decking-cleaned.png` | Freshly pressure-washed wooden decking with a lance | Pressure washing service |
+| `window-cleaning-tudor-house.jpg` | Henry cleaning upstairs windows of a Tudor-style house with a water-fed pole (square; Henry on the left) | Window cleaning service card |
+| `roof-cleaning-foam.jpg` | Tiled roof covered in cleaning treatment, brushed with a long pole | Roof cleaning service card |
+| `decking-half-cleaned.jpg` | Grey composite decking half pressure-washed (dirty left, clean right) | Pressure washing service card, Our Work |
+| `roof-before.jpg` / `roof-after.jpg` | Same semi-detached house: mossy dark roof, then clean orange tiles | Our Work pair |
+| `driveway-before.jpg` / `driveway-after.jpg` | Block-paved driveway (car plate blurred): grey, then red and charcoal | Our Work pair |
+| `patio-red-before.jpg` / `patio-red-after.jpg` | Red patio slabs: black with lichen, then bright red | Our Work pair |
+| `patio-stone-before.jpg` / `patio-stone-after.jpg` | Cream patio slabs: green/brown staining, then clean | Our Work pair |
+| `gutter-before.jpg` / `gutter-cleared.jpg` | Gutter overgrown with grass, then Henry holding the weeds pulled out | Our Work pair ("Cleared" tag) |
 
 Notes:
 - The images are fairly low resolution (max ~860px wide). Don't stretch them to full-screen width. Ask for the original phone photos if a large hero image is needed.
 - Convert to compressed WebP/JPG before launch.
 
 ## Status
-The whole one-page site is built. Sections: header, hero, Services (4 feature cards: window cleaning as a blue icon panel plus 3 photo cards; then 4 icon cards), Our Work (2 before/after photos), How it works (3 steps), About, Contact (WhatsApp and call buttons plus a quote form), footer, and a call/WhatsApp bar on phones.
+The whole one-page site is built. Sections: header, hero, Services (4 photo cards: window cleaning, roof cleaning, moss removal, pressure washing; then 4 icon cards), Our Work (5 before/after pairs plus 1 half-cleaned decking photo), How it works (3 steps), About, Contact (WhatsApp and call buttons plus a quote form), footer, and a call/WhatsApp bar on phones.
 
 Still to do before launch:
 - Real phone number, WhatsApp number, and Facebook and Instagram links. Search for `07000 000000`, `447000000000`, `#facebook` and `#instagram`.
 - Formspree: create a form and replace `YOUR_FORM_ID` in `index.html`.
 - About text: add real details from Henry. There's a TODO comment in the About section.
-- Window cleaning photo: the Window cleaning card has no photo yet (blue icon panel). Swap in one of Henry's own window cleaning photos when he sends one.
 - Confirm with Henry: the roof cleaning and roof repair descriptions in Services.
 - Trust content to add once Henry provides it: reviews/star rating, insurance, years of experience, response time.
-- More photos: the roof moss photo is used three times (hero, Services, Our Work). Ask Henry for more before/after shots and original full-resolution photos.
-- Launch tasks: compress images (WebP), LocalBusiness structured data, favicon, hosting.
+- More photos: `roof-moss-before-after.png` is still used twice (hero and Moss removal card). The new .jpg photos are up to 900px; ask for full-resolution originals if a large hero image is needed. Unused upload: a first-person shot of a window being cleaned with a red pole (not added yet).
+- Launch tasks: compress the older .png images (WebP/JPG), LocalBusiness structured data, favicon, hosting.
