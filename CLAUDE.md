@@ -13,22 +13,23 @@ Single-page website for a local exterior cleaning business in Kent, UK.
 ## The business
 - **Name:** Henry's Exterior Cleaning (matches his van and uniform). Never use "Henry's Jet Washing".
 - **Owner:** Henry. Young, independent, local, and does the work himself.
-- **Area:** Kent, mainly Whitstable and Herne Bay (and surrounding areas).
+- **Area:** Kent: Canterbury, Herne Bay and Whitstable (and surrounding areas).
 - **Customers:** Mainly homeowners, but also open to any customer.
 - **Pricing:** No prices on the site. Every call to action leads to a **free quote**.
 
 ### Services
-1. Roof cleaning
-2. Moss removal
-3. Pressure washing (driveways, patios, decking)
-4. Render cleaning
-5. Gutter cleaning
-6. Fascia and soffit cleaning
-7. Roof repairs
+1. Window cleaning
+2. Roof cleaning
+3. Moss removal
+4. Pressure washing (driveways, patios, decking)
+5. Render cleaning
+6. Gutter cleaning
+7. Fascia and soffit cleaning
+8. Roof repairs
 
 ### Selling points
 - Young and independent: you deal with Henry directly, not a big company.
-- Local to Whitstable and Herne Bay.
+- Local to Canterbury, Herne Bay and Whitstable.
 - Free, no-obligation quotes.
 - Do not invent claims such as years trading, insurance, guarantees or review scores. Ask first.
 
@@ -96,12 +97,13 @@ Notes:
 - Convert to compressed WebP/JPG before launch.
 
 ## Status
-The whole one-page site is built. Sections: header, hero, Services (3 photo cards and 4 icon cards), Our Work (2 before/after photos), How it works (3 steps), About, Contact (WhatsApp and call buttons plus a quote form), footer, and a call/WhatsApp bar on phones.
+The whole one-page site is built. Sections: header, hero, Services (4 feature cards: window cleaning as a blue icon panel plus 3 photo cards; then 4 icon cards), Our Work (2 before/after photos), How it works (3 steps), About, Contact (WhatsApp and call buttons plus a quote form), footer, and a call/WhatsApp bar on phones.
 
 Still to do before launch:
 - Real phone number, WhatsApp number, and Facebook and Instagram links. Search for `07000 000000`, `447000000000`, `#facebook` and `#instagram`.
 - Formspree: create a form and replace `YOUR_FORM_ID` in `index.html`.
 - About text: add real details from Henry. There's a TODO comment in the About section.
+- Window cleaning photo: the Window cleaning card has no photo yet (blue icon panel). Swap in one of Henry's own window cleaning photos when he sends one.
 - Confirm with Henry: the roof cleaning and roof repair descriptions in Services.
 - Trust content to add once Henry provides it: reviews/star rating, insurance, years of experience, response time.
 - More photos: the roof moss photo is used three times (hero, Services, Our Work). Ask Henry for more before/after shots and original full-resolution photos.
