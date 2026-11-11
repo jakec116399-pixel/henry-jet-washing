@@ -571,9 +571,80 @@ h3 {
   background: var(--surface);
 }
 
+/* Swipeable row: one job per screen on phones, with a peek of the next */
 .work-grid {
+  --work-gap: 1rem;
   display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 86%;
+  gap: var(--work-gap);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.work-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.work-grid:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 4px;
+  border-radius: var(--radius-lg);
+}
+
+.work-item {
+  scroll-snap-align: start;
+}
+
+.work-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.work-arrow {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--heading);
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, opacity 0.2s;
+}
+
+.work-arrow:hover:not(:disabled) {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+.work-arrow:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.work-arrow svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.work-count {
+  min-width: 3.5rem;
+  text-align: center;
+  font-weight: 600;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
 }
 
 .work-item figcaption {
@@ -630,7 +701,7 @@ h3 {
 .ba-tag--bl { bottom: 0.9rem; left: 0.9rem; }
 
 .work-more {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   text-align: center;
   font-weight: 500;
 }
@@ -820,6 +891,14 @@ h3 {
 
 .quote-form textarea {
   resize: vertical;
+}
+
+/* Spam-trap field: keep it fully hidden (the rule above would stretch it off-screen) */
+.quote-form .visually-hidden {
+  width: 1px;
+  min-height: 0;
+  padding: 0;
+  border: 0;
 }
 
 .quote-form input:focus,
@@ -1068,8 +1147,8 @@ body {
   }
 
   .work-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem 1.25rem;
+    --work-gap: 1.25rem;
+    grid-auto-columns: calc((100% - var(--work-gap)) / 2);
   }
 
   .form-grid {
@@ -1122,7 +1201,7 @@ body {
 
 @media (min-width: 960px) {
   .work-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-auto-columns: calc((100% - 2 * var(--work-gap)) / 3);
   }
 
   .service-list {
