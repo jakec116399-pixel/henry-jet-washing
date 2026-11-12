@@ -33,11 +33,13 @@ Single-page website for a local exterior cleaning business in Kent, UK.
 - Free, no-obligation quotes.
 - Do not invent claims such as years trading, insurance, guarantees or review scores. Ask first.
 
-### Contact details (PLACEHOLDERS: replace with real ones)
-- Phone: `07000 000000`
-- WhatsApp: `07000 000000` (link format: `https://wa.me/447000000000`)
-- Facebook: `#facebook`
-- Instagram: `#instagram`
+### Contact details
+- Phone: `07564 269192` (`tel:+447564269192`)
+- WhatsApp: same number (`https://wa.me/447564269192`)
+- Facebook: `https://www.facebook.com/profile.php?id=61558028941200`
+- Instagram: `https://www.instagram.com/henryexteriorcleaning/`
+- Quote form: Formspree, `https://formspree.io/f/mbgojynl` (emails go to the address on Henry's Formspree account)
+- Domain: `henryexteriorcleaning.com` (bought; still to be connected to GitHub Pages)
 Phone and WhatsApp should be tap-to-call and tap-to-message on mobile.
 
 ## Tone and feel
@@ -77,7 +79,7 @@ What works: break up block colour with real photos used as backgrounds or panels
 - No logo file yet. Use the text logo "★ Henry's Exterior Cleaning".
 
 ## Getting quotes
-Big Call and WhatsApp buttons, plus a short quote form (posting to Formspree, set up at launch). On mobile, a sticky Call | WhatsApp bar at the bottom of the screen.
+Big Call and WhatsApp buttons, plus a short quote form (posting to Formspree). On mobile, a sticky Call | WhatsApp bar at the bottom of the screen.
 
 ## Photos (`images/`)
 All photos show Henry's real work. Never use stock photos of other people as if they were his work.
@@ -108,10 +110,10 @@ Notes:
 The whole one-page site is built. Sections: header, hero, Services (4 photo cards: window cleaning, roof cleaning, moss removal, pressure washing; then 4 icon cards), Our Work (swipeable gallery of 5 before/after pairs plus 1 half-cleaned decking photo, with Before/After labels on the first pair only (no labels or arrows on the rest); gallery arrows move a screen at a time and the counter counts screens), How it works (3 steps), About, Contact (WhatsApp and call buttons plus a quote form), footer, and a call/WhatsApp bar on phones.
 
 Still to do before launch:
-- Real phone number, WhatsApp number, and Facebook and Instagram links. Search for `07000 000000`, `447000000000`, `#facebook` and `#instagram`.
-- Formspree: create a form and replace `YOUR_FORM_ID` in `index.html`.
+- Formspree: send a test quote from the live site and confirm Henry's email when Formspree asks.
+- Connect `henryexteriorcleaning.com`: DNS records at the registrar, then the custom domain in GitHub Pages settings, then tick Enforce HTTPS.
 - About text: add real details from Henry. There's a TODO comment in the About section.
 - Confirm with Henry: the roof cleaning and roof repair descriptions in Services.
 - Trust content to add once Henry provides it: reviews/star rating, insurance, years of experience, response time.
 - More photos: `roof-moss-before-after.png` is still used twice (hero and Moss removal card). The new .jpg photos are up to 900px; ask for full-resolution originals if a large hero image is needed. Not added yet (user has them): a first-person shot of a window being cleaned; Henry giving a thumbs up on a roof next to a chimney (suggested for About, user declined for now); a close-up of a foamed tiled roof being brushed.
-- Launch tasks: compress the older .png images (WebP/JPG), LocalBusiness structured data, favicon, hosting.
+- Launch tasks: compress the older .png images (WebP/JPG), LocalBusiness structured data, favicon.
