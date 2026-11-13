@@ -383,6 +383,12 @@
             </div>
           </div>
 
+          <!-- Formspree uses the "email" field as the reply address, so Henry can just tap Reply -->
+          <div class="form-row">
+            <label for="email">Email <span class="optional">(optional)</span></label>
+            <input id="email" name="email" type="email" autocomplete="email" inputmode="email">
+          </div>
+
           <div class="form-row">
             <label for="service">What needs cleaning?</label>
             <select id="service" name="service">

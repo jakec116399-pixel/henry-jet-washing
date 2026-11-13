@@ -38,7 +38,7 @@ Single-page website for a local exterior cleaning business in Kent, UK.
 - WhatsApp: same number (`https://wa.me/447564269192`)
 - Facebook: `https://www.facebook.com/profile.php?id=61558028941200`
 - Instagram: `https://www.instagram.com/henryexteriorcleaning/`
-- Quote form: Formspree, `https://formspree.io/f/mbgojynl` (emails go to the address on Henry's Formspree account)
+- Quote form: Formspree, `https://formspree.io/f/mbgojynl` (emails go to the address on Henry's Formspree account). Fields: name, phone, postcode, optional email (named `email`, so Formspree uses it as the reply address), service, message
 - Domain: `henryexteriorcleaning.com` (bought; still to be connected to GitHub Pages)
 Phone and WhatsApp should be tap-to-call and tap-to-message on mobile.
 
