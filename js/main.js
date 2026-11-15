@@ -128,6 +128,58 @@ if (cookieBanner) {
   });
 }
 
+// Quote form: send to Formspree in the background, then go to our own thank-you page.
+// Without JavaScript the form still posts straight to Formspree as before.
+const quoteForm = document.querySelector("#quote-form");
+
+if (quoteForm) {
+  const submitBtn = quoteForm.querySelector('button[type="submit"]');
+  const errorMsg = document.querySelector("#form-error");
+
+  quoteForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    errorMsg.hidden = true;
+    submitBtn.disabled = true;
+    const label = submitBtn.textContent;
+    submitBtn.textContent = "Sending…";
+
+    try {
+      const response = await fetch(quoteForm.action, {
+        method: "POST",
+        body: new FormData(quoteForm),
+        headers: { Accept: "application/json" },
+      });
+      if (!response.ok) throw new Error(`Formspree returned ${response.status}`);
+      try {
+        // Lets the thank-you page count the lead once, and only after a real submission
+        sessionStorage.setItem("hec-lead", quoteForm.service.value);
+      } catch {
+        // Storage blocked: the visitor still sees the thank-you page
+      }
+      window.location.href = "thank-you.html";
+    } catch {
+      errorMsg.hidden = false;
+      submitBtn.disabled = false;
+      submitBtn.textContent = label;
+    }
+  });
+}
+
+// Thank-you page: record a generate_lead event in Google Analytics (for Google Ads conversions).
+// Only fires after a real submission, once per submission, and only if the visitor accepted cookies.
+if (document.querySelector(".thanks")) {
+  let service = null;
+  try {
+    service = sessionStorage.getItem("hec-lead");
+    sessionStorage.removeItem("hec-lead");
+  } catch {
+    service = null;
+  }
+  if (service !== null && window.gtag) {
+    window.gtag("event", "generate_lead", { form_name: "quote_request", service });
+  }
+}
+
 // Keep the footer year current
 const year = document.querySelector("#year");
 if (year) {

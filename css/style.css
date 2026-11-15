@@ -1112,6 +1112,25 @@ h3 {
   padding-top: 0;
 }
 
+/* Thank-you page after a quote request */
+.thanks h1 {
+  margin-bottom: 1rem;
+}
+
+.thanks-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
+.form-error {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  text-align: center;
+  color: var(--heading);
+}
+
 /* Pages without the call/WhatsApp bar don't need space for it */
 body.no-mobile-bar {
   padding-bottom: 0;

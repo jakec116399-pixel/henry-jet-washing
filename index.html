@@ -364,7 +364,7 @@
           </div>
         </div>
 
-        <form class="quote-form" action="https://formspree.io/f/mbgojynl" method="POST">
+        <form class="quote-form" id="quote-form" action="https://formspree.io/f/mbgojynl" method="POST">
           <h3>Request a quote</h3>
 
           <div class="form-row">
@@ -413,6 +413,7 @@
           <input type="text" name="_gotcha" class="visually-hidden" tabindex="-1" autocomplete="off">
 
           <button type="submit" class="btn btn-primary btn-block">Send my quote request</button>
+          <p class="form-error" id="form-error" role="alert" hidden>Sorry, that didn't send. Please try again, or call or WhatsApp Henry on 07564 269192.</p>
           <p class="form-note">Your details are only used to reply to your quote request. See the <a href="privacy.html" target="_blank" rel="noopener">privacy notice<span class="visually-hidden"> (opens in a new tab)</span></a>.</p>
         </form>
       </div>

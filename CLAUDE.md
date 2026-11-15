@@ -84,6 +84,8 @@ What works: break up block colour with real photos used as backgrounds or panels
 - Google Analytics `G-SVM5MWSPHV`, loaded by `js/main.js` only after the visitor taps Accept on the cookie banner (UK PECR consent). Choice stored in localStorage (`hec-cookie-consent`); "Cookie settings" in the footer reopens the banner; Reject deletes `_ga` cookies.
 - Reject and Accept buttons have equal weight (ICO guidance: no nudging).
 - `privacy.html`: short privacy notice in short sentences, no bullet points (user preference), covering the UK GDPR essentials (who, what, why + lawful basis, Formspree and Google as recipients, transfer outside the UK, retention, cookies, rights, ICO). Henry should read it and confirm it matches what he does.
+- Quote form sends to Formspree in the background (fetch, `Accept: application/json`), then goes to `thank-you.html` on our own site (Formspree's own redirect isn't on the free plan). Without JS it still posts to Formspree normally. On failure it shows an error with Henry's number.
+- `thank-you.html` fires GA4 `generate_lead` (`form_name: quote_request`, `service`) once per real submission (sessionStorage flag `hec-lead`), and only if cookies were accepted. No personal details are sent to Google. Henry marks `generate_lead` as a key event in GA4 and imports it into Google Ads.
 - The form note, footer and cookie banner link to the privacy notice in a new tab (so a half-filled form is not lost), with screen-reader text "(opens in a new tab)".
 
 ## Getting quotes
