@@ -79,6 +79,7 @@ What works: break up block colour with real photos used as backgrounds or panels
 - The dark overlay is only for photo backgrounds. The rest of the page stays light.
 - Font: Plus Jakarta Sans (Google Fonts).
 - No logo file yet. Use the text logo "★ Henry's Exterior Cleaning".
+- Browser tab icon: the gold logo star. `favicon.svg` (main), `favicon.ico` (16/32/48px fallback) and `apple-touch-icon.png` (180px, star on white, for phone home screens), linked in the head of every page.
 
 ## Analytics, cookies and privacy (live)
 - Google Analytics `G-SVM5MWSPHV`, loaded by `js/main.js` only after the visitor taps Accept on the cookie banner (UK PECR consent). Choice stored in localStorage (`hec-cookie-consent`); "Cookie settings" in the footer reopens the banner; Reject deletes `_ga` cookies.
@@ -126,4 +127,4 @@ Still to do before launch:
 - Confirm with Henry: the roof cleaning and roof repair descriptions in Services.
 - Trust content to add once Henry provides it: reviews/star rating, insurance, years of experience, response time.
 - More photos: `roof-moss-before-after.png` is still used twice (hero and Moss removal card). The new .jpg photos are up to 900px; ask for full-resolution originals if a large hero image is needed. Not added yet (user has them): a first-person shot of a window being cleaned; Henry giving a thumbs up on a roof next to a chimney (suggested for About, user declined for now); a close-up of a foamed tiled roof being brushed.
-- Launch tasks: compress the older .png images (WebP/JPG), LocalBusiness structured data, favicon.
+- Launch tasks: compress the older .png images (WebP/JPG), LocalBusiness structured data.
