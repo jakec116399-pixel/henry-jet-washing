@@ -83,7 +83,7 @@ What works: break up block colour with real photos used as backgrounds or panels
 ## Analytics, cookies and privacy (on the working branch, not yet live)
 - Google Analytics `G-SVM5MWSPHV`, loaded by `js/main.js` only after the visitor taps Accept on the cookie banner (UK PECR consent). Choice stored in localStorage (`hec-cookie-consent`); "Cookie settings" in the footer reopens the banner; Reject deletes `_ga` cookies.
 - Reject and Accept buttons have equal weight (ICO guidance: no nudging).
-- `privacy.html`: short bullet-point privacy notice covering the UK GDPR essentials (who, what, why + lawful basis, Formspree and Google as recipients, transfer outside the UK, retention, cookies, rights, ICO). Henry should read it and confirm it matches what he does.
+- `privacy.html`: short privacy notice in short sentences, no bullet points (user preference), covering the UK GDPR essentials (who, what, why + lawful basis, Formspree and Google as recipients, transfer outside the UK, retention, cookies, rights, ICO). Henry should read it and confirm it matches what he does.
 - The form note links to the privacy notice.
 
 ## Getting quotes
