@@ -34,6 +34,8 @@ Single-page website for a local exterior cleaning business in Kent, UK.
 - Do not invent claims such as years trading, insurance, guarantees or review scores. Ask first.
 
 ### Contact details
+- Owner: Henry Smith, sole trader, trading as Henry's Exterior Cleaning, Herne Bay, Kent (shown in the footer bottom line to meet UK business name and e-commerce disclosure rules)
+- Email: `henry.exteriorcleaning@gmail.com` (footer Contact column)
 - Phone: `07564 269192` (`tel:+447564269192`)
 - WhatsApp: same number (`https://wa.me/447564269192`)
 - Facebook: `https://www.facebook.com/profile.php?id=61558028941200`
