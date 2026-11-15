@@ -413,7 +413,7 @@
           <input type="text" name="_gotcha" class="visually-hidden" tabindex="-1" autocomplete="off">
 
           <button type="submit" class="btn btn-primary btn-block">Send my quote request</button>
-          <p class="form-note">Your details are only used to reply to your quote request and are never shared.</p>
+          <p class="form-note">Your details are only used to reply to your quote request. See the <a href="privacy.html">privacy notice</a>.</p>
         </form>
       </div>
     </section>
@@ -453,6 +453,10 @@
 
     <div class="container footer-bottom">
       <p>&copy; <span id="year">2026</span> Henry Smith, trading as Henry's Exterior Cleaning &middot; Herne Bay, Kent</p>
+      <p class="footer-legal">
+        <a href="privacy.html">Privacy notice</a>
+        <button type="button" class="link-button" data-cookie-settings>Cookie settings</button>
+      </p>
     </div>
   </footer>
 
@@ -466,6 +470,15 @@
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19.1L4 20z"/></svg>
       WhatsApp
     </a>
+  </div>
+
+  <!-- Cookie consent: Google Analytics only loads after "Accept" (see js/main.js) -->
+  <div class="cookie-banner" id="cookie-banner" role="region" aria-label="Cookie choices" hidden>
+    <p>Can this site use Google Analytics cookies to count visits and see which pages are useful? They're only set if you accept. <a href="privacy.html#cookies">Privacy notice</a></p>
+    <div class="cookie-actions">
+      <button type="button" class="btn btn-secondary" data-consent="denied">Reject</button>
+      <button type="button" class="btn btn-secondary" data-consent="granted">Accept</button>
+    </div>
   </div>
 
   <script src="js/main.js"></script>

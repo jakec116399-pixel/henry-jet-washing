@@ -54,6 +54,80 @@ if (workTrack) {
   update();
 }
 
+// Cookie consent and Google Analytics.
+// Analytics only loads after the visitor taps Accept. The choice is remembered on their device,
+// and "Cookie settings" in the footer reopens the banner.
+const GA_ID = "G-SVM5MWSPHV";
+const CONSENT_KEY = "hec-cookie-consent";
+const cookieBanner = document.querySelector("#cookie-banner");
+
+const readConsent = () => {
+  try {
+    return localStorage.getItem(CONSENT_KEY);
+  } catch {
+    return null;
+  }
+};
+
+const saveConsent = (value) => {
+  try {
+    localStorage.setItem(CONSENT_KEY, value);
+  } catch {
+    // Storage blocked: the choice still applies for this visit
+  }
+};
+
+const loadAnalytics = () => {
+  window[`ga-disable-${GA_ID}`] = false;
+  if (window.gtag) return;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function gtag() {
+    window.dataLayer.push(arguments);
+  };
+  window.gtag("js", new Date());
+  window.gtag("config", GA_ID);
+  const script = document.createElement("script");
+  script.async = true;
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+  document.head.appendChild(script);
+};
+
+const removeAnalytics = () => {
+  window[`ga-disable-${GA_ID}`] = true;
+  const host = location.hostname.replace(/^www\./, "");
+  document.cookie.split(";").forEach((cookie) => {
+    const name = cookie.split("=")[0].trim();
+    if (name.startsWith("_ga")) {
+      [host, `.${host}`, ""].forEach((domain) => {
+        document.cookie = `${name}=; Max-Age=0; path=/${domain ? `; domain=${domain}` : ""}`;
+      });
+    }
+  });
+};
+
+if (cookieBanner) {
+  const consent = readConsent();
+  if (consent === "granted") loadAnalytics();
+  if (!consent) cookieBanner.hidden = false;
+
+  cookieBanner.querySelectorAll("[data-consent]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const choice = btn.dataset.consent;
+      saveConsent(choice);
+      if (choice === "granted") loadAnalytics();
+      else removeAnalytics();
+      cookieBanner.hidden = true;
+    });
+  });
+
+  document.querySelectorAll("[data-cookie-settings]").forEach((link) => {
+    link.addEventListener("click", () => {
+      cookieBanner.hidden = false;
+      cookieBanner.querySelector("[data-consent]").focus();
+    });
+  });
+}
+
 // Keep the footer year current
 const year = document.querySelector("#year");
 if (year) {

@@ -998,6 +998,130 @@ h3 {
   font-size: 0.85rem;
 }
 
+/* Privacy link and cookie settings under the copyright line */
+.footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.footer-legal a,
+.footer-legal .link-button {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-legal a:hover,
+.footer-legal .link-button:hover {
+  color: var(--white);
+}
+
+/* A button that looks like a text link */
+.link-button {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: var(--blue);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* ---------- Cookie banner ---------- */
+.cookie-banner {
+  position: fixed;
+  left: var(--gutter);
+  right: var(--gutter);
+  bottom: calc(0.75rem + env(safe-area-inset-bottom));
+  z-index: 100;
+  display: grid;
+  gap: 0.9rem;
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 1.1rem 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  box-shadow: var(--shadow-lg);
+  font-size: 0.92rem;
+  color: var(--text);
+}
+
+.cookie-banner[hidden] {
+  display: none;
+}
+
+.cookie-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+}
+
+.cookie-actions .btn {
+  min-height: 44px;
+}
+
+@media (min-width: 640px) {
+  .cookie-banner {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .cookie-actions {
+    grid-template-columns: auto auto;
+  }
+}
+
+/* ---------- Privacy notice page ---------- */
+.legal {
+  padding: calc(var(--header-height) + 2.5rem) 0 var(--space-section);
+}
+
+.legal-inner {
+  max-width: 44rem;
+}
+
+.legal h1 {
+  font-size: clamp(2rem, 6vw, 2.75rem);
+}
+
+.legal h2 {
+  margin-top: 2.25rem;
+  margin-bottom: 0.6rem;
+  font-size: 1.3rem;
+}
+
+.legal p + p {
+  margin-top: 0.8rem;
+}
+
+.legal-updated {
+  margin-top: 0.4rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.legal code {
+  font-size: 0.9em;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  background: var(--surface);
+}
+
+.legal-back {
+  margin-top: 2.5rem;
+}
+
+.site-footer--simple {
+  padding-top: 0;
+}
+
+/* Pages without the call/WhatsApp bar don't need space for it */
+body.no-mobile-bar {
+  padding-bottom: 0;
+}
+
 /* ---------- Mobile call/WhatsApp bar ---------- */
 .mobile-bar {
   position: fixed;
