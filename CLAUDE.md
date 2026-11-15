@@ -107,11 +107,11 @@ Notes:
 - Convert to compressed WebP/JPG before launch.
 
 ## Status
+Live at https://henryexteriorcleaning.com (HTTPS enforced). The quote form is tested and working.
+
 The whole one-page site is built. Sections: header, hero, Services (4 photo cards: window cleaning, roof cleaning, moss removal, pressure washing; then 4 icon cards), Our Work (swipeable gallery of 5 before/after pairs plus 1 half-cleaned decking photo, with Before/After labels on the first pair only (no labels or arrows on the rest); gallery arrows move a screen at a time and the counter counts screens), How it works (3 steps), About, Contact (WhatsApp and call buttons plus a quote form), footer, and a call/WhatsApp bar on phones.
 
 Still to do before launch:
-- Formspree: send a test quote from the live site and confirm Henry's email when Formspree asks.
-- Connect `henryexteriorcleaning.com`: DNS records at the registrar, then the custom domain in GitHub Pages settings, then tick Enforce HTTPS.
 - About text: add real details from Henry. There's a TODO comment in the About section.
 - Confirm with Henry: the roof cleaning and roof repair descriptions in Services.
 - Trust content to add once Henry provides it: reviews/star rating, insurance, years of experience, response time.
