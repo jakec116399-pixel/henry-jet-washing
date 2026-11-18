@@ -702,15 +702,6 @@ h3 {
 }
 
 /* ---------- Reviews ---------- */
-.reviews-score {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  margin-top: 0.5rem;
-  font-weight: 600;
-  color: var(--text-muted);
-}
-
 .stars {
   display: inline-flex;
   gap: 0.15rem;
@@ -722,9 +713,13 @@ h3 {
   fill: var(--gold);
 }
 
+.reviews-score {
+  margin-top: 0.6rem;
+}
+
 .stars--lg svg {
-  width: 1.4rem;
-  height: 1.4rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .review-card {
