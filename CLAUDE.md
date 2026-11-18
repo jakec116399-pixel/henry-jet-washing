@@ -126,6 +126,6 @@ Still to do before launch:
 - About text: add real details from Henry. There's a TODO comment in the About section.
 - Confirm with Henry: the roof cleaning and roof repair descriptions in Services.
 - Trust content to add once Henry provides it: insurance, years of experience, response time.
-- Google Business Profile link: needed for "Read all reviews on Google" and "Leave a review" buttons in the Reviews section.
+- Google Maps listing: `https://maps.app.goo.gl/Q8pMAnLQJLYgzwhP6` ("See all reviews on Google" button under the reviews). A direct "Leave a review" link needs Henry's review link from Google Business Profile ("Ask for reviews" / "Share review form"); not added yet.
 - More photos: `roof-moss-before-after.png` is still used twice (hero and Moss removal card). The new .jpg photos are up to 900px; ask for full-resolution originals if a large hero image is needed. Not added yet (user has them): a first-person shot of a window being cleaned; Henry giving a thumbs up on a roof next to a chimney (suggested for About, user declined for now); a close-up of a foamed tiled roof being brushed.
 - Launch tasks: compress the older .png images (WebP/JPG), LocalBusiness structured data.
