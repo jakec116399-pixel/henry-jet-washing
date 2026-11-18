@@ -701,6 +701,58 @@ h3 {
   font-weight: 700;
 }
 
+/* ---------- Reviews ---------- */
+.reviews-score {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.stars {
+  display: inline-flex;
+  gap: 0.15rem;
+}
+
+.stars svg {
+  width: 1.05rem;
+  height: 1.05rem;
+  fill: var(--gold);
+}
+
+.stars--lg svg {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.review-card {
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+}
+
+.review-card blockquote {
+  flex: 1;
+  color: var(--heading);
+  line-height: 1.6;
+}
+
+.review-card figcaption {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.review-card figcaption strong {
+  color: var(--heading);
+}
+
 /* ---------- How it works ---------- */
 .steps {
   display: grid;

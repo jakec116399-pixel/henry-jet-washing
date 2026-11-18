@@ -19,40 +19,39 @@ if (menuToggle && siteNav) {
   });
 }
 
-// Our Work gallery: arrows move one screen at a time, and the counter counts screens
-// (1 / 6 on phones, 1 / 3 on tablets, 1 / 2 on desktop)
-const workTrack = document.querySelector("#work-track");
+// Swipeable rows (Our Work gallery, reviews): arrows move one screen at a time,
+// and the counter counts screens (e.g. 1 / 6 on phones, 1 / 2 on desktop)
+document.querySelectorAll("[data-carousel]").forEach((carousel) => {
+  const track = carousel.querySelector("[data-carousel-track]");
+  const items = track.children;
+  const current = carousel.querySelector("[data-carousel-current]");
+  const total = carousel.querySelector("[data-carousel-total]");
+  const [prevBtn, nextBtn] = carousel.querySelectorAll(".work-arrow");
 
-if (workTrack) {
-  const items = workTrack.querySelectorAll(".work-item");
-  const current = document.querySelector("#work-current");
-  const total = document.querySelector("#work-total");
-  const [prevBtn, nextBtn] = document.querySelectorAll(".work-arrow");
-
-  const itemStep = () => items[0].offsetWidth + parseFloat(getComputedStyle(workTrack).columnGap);
-  const perView = () => Math.max(1, Math.round((workTrack.clientWidth + 1) / itemStep()));
+  const itemStep = () => items[0].offsetWidth + parseFloat(getComputedStyle(track).columnGap);
+  const perView = () => Math.max(1, Math.round((track.clientWidth + 1) / itemStep()));
 
   const update = () => {
     const pages = Math.ceil(items.length / perView());
-    const atEnd = workTrack.scrollLeft >= workTrack.scrollWidth - workTrack.clientWidth - 2;
-    const page = Math.round(workTrack.scrollLeft / (itemStep() * perView())) + 1;
+    const atEnd = track.scrollLeft >= track.scrollWidth - track.clientWidth - 2;
+    const page = Math.round(track.scrollLeft / (itemStep() * perView())) + 1;
     total.textContent = pages;
     current.textContent = atEnd ? pages : Math.min(page, pages);
-    prevBtn.disabled = workTrack.scrollLeft <= 2;
+    prevBtn.disabled = track.scrollLeft <= 2;
     nextBtn.disabled = atEnd;
   };
 
   [prevBtn, nextBtn].forEach((btn) => {
     btn.addEventListener("click", () => {
       const left = itemStep() * perView() * Number(btn.dataset.dir);
-      workTrack.scrollBy({ left, behavior: "smooth" });
+      track.scrollBy({ left, behavior: "smooth" });
     });
   });
 
-  workTrack.addEventListener("scroll", update, { passive: true });
+  track.addEventListener("scroll", update, { passive: true });
   window.addEventListener("resize", update);
   update();
-}
+});
 
 // Cookie consent and Google Analytics.
 // Analytics only loads after the visitor taps Accept. The choice is remembered on their device,

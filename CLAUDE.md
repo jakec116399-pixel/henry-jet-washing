@@ -120,11 +120,12 @@ Notes:
 ## Status
 Live at https://henryexteriorcleaning.com (HTTPS enforced). The quote form is tested and working.
 
-The whole one-page site is built. Sections: header, hero, Services (4 photo cards: window cleaning, roof cleaning, moss removal, pressure washing; then 4 icon cards), Our Work (swipeable gallery of 5 before/after pairs plus 1 half-cleaned decking photo, with Before/After labels on the first pair only (no labels or arrows on the rest); gallery arrows move a screen at a time and the counter counts screens), How it works (3 steps), About, Contact (WhatsApp and call buttons plus a quote form), footer, and a call/WhatsApp bar on phones.
+The whole one-page site is built. Sections: header, hero, Services (4 photo cards: window cleaning, roof cleaning, moss removal, pressure washing; then 4 icon cards), Reviews (swipeable row of 6 real Google reviews under "Rated 5.0 on Google", 10 reviews as of Nov 2026; reviewers shown as first name + initial; text copied word for word, Charlie E.'s shortened with an ellipsis; update the count when new reviews arrive. Shares the carousel code with Our Work via `[data-carousel]`), Our Work (swipeable gallery of 5 before/after pairs plus 1 half-cleaned decking photo, with Before/After labels on the first pair only (no labels or arrows on the rest); gallery arrows move a screen at a time and the counter counts screens), How it works (3 steps), About, Contact (WhatsApp and call buttons plus a quote form), footer, and a call/WhatsApp bar on phones.
 
 Still to do before launch:
 - About text: add real details from Henry. There's a TODO comment in the About section.
 - Confirm with Henry: the roof cleaning and roof repair descriptions in Services.
-- Trust content to add once Henry provides it: reviews/star rating, insurance, years of experience, response time.
+- Trust content to add once Henry provides it: insurance, years of experience, response time.
+- Google Business Profile link: needed for "Read all reviews on Google" and "Leave a review" buttons in the Reviews section.
 - More photos: `roof-moss-before-after.png` is still used twice (hero and Moss removal card). The new .jpg photos are up to 900px; ask for full-resolution originals if a large hero image is needed. Not added yet (user has them): a first-person shot of a window being cleaned; Henry giving a thumbs up on a roof next to a chimney (suggested for About, user declined for now); a close-up of a foamed tiled roof being brushed.
 - Launch tasks: compress the older .png images (WebP/JPG), LocalBusiness structured data.
